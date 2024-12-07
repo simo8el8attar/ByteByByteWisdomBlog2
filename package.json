@@ -3,17 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://github.com/simo8el8attar/bytebybytewisdomblog2",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
     "date-fns": "^3.0.6",
+    "gh-pages": "^6.2.0",
     "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
