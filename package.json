@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/simo8el8attar/bytebybytewisdomblog2",
+  "homepage": "https://bytebybytewisdom.me",
 
   "scripts": {
     "dev": "vite",
