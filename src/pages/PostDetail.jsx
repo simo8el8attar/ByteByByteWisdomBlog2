@@ -2,10 +2,16 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { posts } from '../data/posts';
 import PostCategory from '../components/post/PostCategory';
+import slugify from 'slugify'; // Import slugify
+const generateSlug = (title) => slugify(title, { lower: true, strict: true });
 export default function PostDetail() {
   const { slug } = useParams();
   const decodedSlug = decodeURIComponent(slug)
-  const post = posts.find(p => p.slug === decodedSlug);
+  const normalizedPosts = posts.map(post => ({
+    ...post,
+    slug: generateSlug(post.title), // Generate slugs dynamically
+  }));
+  const post = normalizedPosts.find(p => p.slug === decodedSlug);
 
   if (!post) {
     return (
