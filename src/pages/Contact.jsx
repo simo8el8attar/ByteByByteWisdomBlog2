@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import TextArea from '../components/ui/TextArea';
@@ -8,18 +7,61 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
 
-  const handleSubmit = (e) => {
+  const [feedback, setFeedback] = useState({
+    success: null,
+    message: '',
+  });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    // Simple front-end validation (optional)
+    if (!formData.name || !formData.email || !formData.message) {
+      setFeedback({
+        success: false,
+        message: 'Please fill out all fields before submitting.',
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch('https://formspree.io/f/xnnqyndg', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFeedback({
+          success: true,
+          message: 'Your message has been sent successfully!',
+        });
+        setFormData({ name: '', email: '', message: '' }); // Clear the form
+      } else {
+        const errorData = await response.json();
+        setFeedback({
+          success: false,
+          message: errorData?.error || 'Something went wrong. Please try again.',
+        });
+      }
+    } catch (error) {
+      setFeedback({
+        success: false,
+        message: 'An error occurred. Please check your internet connection and try again.',
+      });
+    }
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -57,10 +99,21 @@ export default function Contact() {
                 onChange={handleChange}
                 required
               />
-              <Button type="submit">
-                Send Message
-              </Button>
+              <Button type="submit">Send Message</Button>
             </form>
+
+            {/* Feedback Message */}
+            {feedback.message && (
+              <div
+                className={`mt-4 p-3 rounded ${
+                  feedback.success
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-red-100 text-red-800'
+                }`}
+              >
+                {feedback.message}
+              </div>
+            )}
           </div>
         </div>
       </div>
