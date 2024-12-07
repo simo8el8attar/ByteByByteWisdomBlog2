@@ -8,7 +8,7 @@ export default function PostCard({ post }) {
       <div className="relative">
         <img
           className="h-48 w-full object-cover sm:h-56 md:h-64 lg:h-72"
-          src={post.image}
+          src={post.image[0]}
           alt={post.title}
         />
       </div>

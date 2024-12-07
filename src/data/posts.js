@@ -1,35 +1,31 @@
 export const posts = [
   {
     id: 1,
-    title: "Getting Started with React Development",
-    slug: "getting-started-with-react",
+    title: "Stunning Christmas Tree Ideas for 2024 🎄✨",
+    slug: "stunning-christmas-tree-ideas-2024", // Updated slug
     excerpt: "Learn the fundamentals of React and start building modern web applications.",
-    content: "React is a powerful JavaScript library for building user interfaces. In this post, we'll explore the core concepts...",
-    image: "https://i.imgur.com/UlfzyJe.jpeg",
-    date: "2023-12-20",
-    readTime: "5 min read",
-    category: "Development"
+    content: "Get inspired this holiday season with our curated collection of stunning Christmas tree ideas for 2024! From modern minimalist designs to cozy rustic themes, discover creative decorations, color palettes, and unique ornaments to make your tree the centerpiece of your festive celebrations. Perfect for every style and budget! 🎅🌟",
+    image: ["https://i.imgur.com/Fw0Y3AY.jpeg"],
+    date: "2024-12-07",
+    readTime: "2 min read",
+    category: "Christmas",
+    additionalContent: [
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/O67b57N.jpeg',
+      },
+      {
+        type: 'text',
+        content: 'Warm up your holidays with cozy and chic Christmas tree ideas! From soft rustic vibes to elegant modern designs, find the perfect inspiration for your tree this 2024. 🎁✨',
+      },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/fWPGGD9.jpeg',
+      },
+      {
+        type: 'text',
+        content: 'Break the mold with these unique Christmas tree themes for 2024! From nature-inspired decor to glamorous metallics, there’s something for everyone. 🌟🎁',
+      },
+    ],
   },
-  {
-    id: 2,
-    title: "Mastering CSS Grid Layout",
-    slug: "mastering-css-grid",
-    excerpt: "A comprehensive guide to using CSS Grid for modern web layouts.",
-    content: "CSS Grid Layout is a revolutionary system for creating complex web layouts with ease...",
-    image: "https://i.imgur.com/UlfzyJe.jpeg",
-    date: "2023-12-18",
-    readTime: "8 min read",
-    category: "Design"
-  },
-  {
-    id: 3,
-    title: "The Future of Web Development",
-    slug: "future-of-web-development",
-    excerpt: "Exploring upcoming trends and technologies in web development.",
-    content: "As we look towards the future, several emerging technologies are shaping the landscape of web development...",
-    image: "https://i.imgur.com/UlfzyJe.jpeg",
-    date: "2023-12-15",
-    readTime: "6 min read",
-    category: "Technology"
-  }
 ];
