@@ -2,13 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://i.imgur.com/dr32MnA.jpeg" />
-    <meta name="google-adsense-account" content="ca-pub-3296742898304950">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-3296742898304950" />
     <title>Byte-By-Byte-Wisdom</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/dr32MnA.jpeg" />
+
+    <!-- Plausible Analytics Script -->
+    <script
+      defer
+      data-domain="bytebybytewisdom.me"
+      src="https://plausible.io/js/script.hash.outbound-links.tagged-events.js"
+    ></script>
+    <script>
+      window.plausible = window.plausible || function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
+    </script>
   </head>
   <body>
+    <!-- Root Div for React App -->
     <div id="root"></div>
+
+    <!-- React Main Script -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
