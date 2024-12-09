@@ -26,6 +26,22 @@ export const posts = [
         type: 'text',
         content: 'Break the mold with these unique Christmas tree themes for 2024! From nature-inspired decor to glamorous metallics, there’s something for everyone. 🌟🎁',
       },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/l9kOMZA.png',
+      },
+      {
+        type: 'text',
+        content: 'Keep it simple and magical with this delightful elf-themed Christmas tree! Featuring a whimsical elf hat topper, striped candy canes, and festive green and red accents, it’s the perfect way to add charm to your holiday decor. 🎁❤️💚 #ElfChristmasTree #HolidayDecorIdeas',
+      },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/IQTBJx9.png',
+      },
+      {
+        type: 'text',
+        content: 'Transform your holiday space with this elegant silver and blue Christmas tree! Featuring frosted ornaments, shimmering ribbons, and cool white lights, it creates a serene and sophisticated winter wonderland vibe. Perfect for minimalistic decor lovers. 🎁💙🤍 #WinterDecor #ChristmasInspo',
+      },
     ],
   },
 ];
