@@ -80,5 +80,57 @@ export const posts = [
         content: 'Transform your bedroom into a romantic holiday retreat! Featuring festive red and white bedding, twinkling fairy lights, and a charming Christmas tree, this space is perfect for cozy nights and holiday cheer. Add hot cocoa and a plaid throw for the ultimate winter vibes. 🌟☕❄️ #CozyBedroom #HolidayDecor'
       },
     ],
+  },{
+    id: 3,
+    title: "Neutral Christmas Aesthetic Pictures✨",
+    slug: "neutral-christmas-aesthetic-pictures", // Updated slug
+    excerpt: "Embrace simplicity with a neutral Christmas aesthetic! Soft tones, natural wood accents, and minimalist decor create a calm and elegant holiday vibe. Perfect for a cozy, festive retreat. 🤍🌿🕯️",
+    content: "Embrace simplicity with a neutral Christmas aesthetic! Soft tones, natural wood accents, and minimalist decor create a calm and elegant holiday vibe. Perfect for a cozy, festive retreat. 🤍🌿🕯️",
+    image: ["https://i.imgur.com/NqxIzc8.png"],
+    date: "2024-12-09",
+    readTime: "2 min read",
+    category: "Decor",
+    additionalContent: [
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/uqoZY3T.png',
+      },
+      {
+        type: 'text',
+        content: 'Achieve holiday elegance with a beige and white Christmas aesthetic. Cozy textures, a minimalist tree, and simple greenery bring a calm and festive atmosphere to your living room. Perfect for understated seasonal charm! 🌿✨🕯️',
+      },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/y96Rj3p.png',
+      },
+      {
+        type: 'text',
+        content: 'Experience the magic of a minimalist holiday retreat! With crisp white bedding, a simple wooden Christmas tree, and soft fairy lights, this Scandinavian-style bedroom is perfect for serene winter nights. 🌟☕🍪 #ScandiChristmas #CozyMinimalism',
+      },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/xzz3bSv.png',
+      },
+      {
+        type: 'text',
+        content: 'Embrace simplicity with a neutral Christmas aesthetic! Soft tones, natural wood accents, and minimalist decor create a calm and elegant holiday vibe. Perfect for a cozy, festive retreat. 🤍🌿🕯️ #NeutralChristmas #HolidayMinimalism'
+      },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/shbuS5h.png',
+      },
+      {
+        type: 'text',
+        content: 'Add festive charm to your home office with neutral Christmas decor! A small tabletop tree, cozy candle arrangements, and warm fairy lights create a calm and productive holiday vibe. Perfect for seasonal inspiration! 🌿🕯️🤍 #NeutralWorkspace #HolidayDecor'
+      },
+      {
+        type: 'image',
+        src: 'https://i.imgur.com/EGebP0T.png',
+      },
+      {
+        type: 'text',
+        content: 'Brighten your holidays with a bohemian Christmas! Handmade ornaments, dried flowers, and vibrant patterns create a joyful and eclectic decor. Perfect for cozy and artistic seasonal gatherings. 🌸🌿🕯️ #BohoChristmas #HolidayDecorInspo'
+      },
+    ],
   },
 ];
