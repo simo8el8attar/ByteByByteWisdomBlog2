@@ -1,5 +1,5 @@
 import React from 'react';
-import { posts } from '../data/posts';
+import { posts } from '../data/posts.jsx';
 import PostCard from '../components/post/PostCard';
 
 export default function Home() {

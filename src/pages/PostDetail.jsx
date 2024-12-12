@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { posts } from '../data/posts';
+import { posts } from '../data/posts.jsx';
 import PostCategory from '../components/post/PostCategory';
 import slugify from 'slugify'; // Import slugify
 
@@ -51,16 +51,48 @@ export default function PostDetail() {
             </div>
           )}
         </div>
-        <div className="mt-12 prose prose-lg mx-auto">
-          <p>{post.content}</p>
-          {additionalContent.map((item, idx) =>
-            item.type === 'image' ? (
-              <img key={idx} src={item.src} alt="Additional content" className="my-4 max-w-full" />
-            ) : item.type === 'text' ? (
-              <p key={idx} className="my-4">{item.content}</p>
-            ) : null
-          )}
-        </div>
+              <div className="mt-12 prose prose-lg mx-auto">
+        <p>{post.content}</p>
+        {additionalContent.map((item, idx) => {
+          if (item.type === 'image') {
+            return (
+              <img
+                key={idx}
+                src={item.src}
+                alt="Additional content"
+                className="my-4 max-w-full"
+              />
+            );
+          } else if (item.type === 'text') {
+            return (
+              <p key={idx} className="my-4">
+                {item.content}
+              </p>
+            );
+          } else if (item.type === 'title') {
+            return (
+              <h2 key={idx} className="my-4">
+                {item.content}
+              </h2>
+            );
+          } else if (item.type === 'link') {
+            return (
+              <a key={idx} href={item.linkA} className="my-4 text-blue-500 underline">
+                {item.linkA}
+              </a>
+            );
+          }else if (item.type === 'custom') {
+            // Directly render custom JSX elements
+            return (
+              <div key={idx} className="my-4">
+                {item.content} {/* `item.content` should contain JSX elements */}
+              </div>
+            );
+          }
+          return null;
+        })}
+      </div>
+
       </article>
     </div>
   );
